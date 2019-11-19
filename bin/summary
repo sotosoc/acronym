@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+Dir.glob("src/*").sort.each do |file|
+  puts "#{File.basename(file)}"
+  File.open(file).each do |line|
+    puts line
+  end
+  puts
+end
